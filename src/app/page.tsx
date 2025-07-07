@@ -17,7 +17,7 @@ export default async function Home() {
   // console.log("characters :>> ", characters);
 
   return (
-    <div className="min-h-screen p-8   sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen p-4 sm:p-6 font-[family-name:var(--font-geist-sans)]">
       <main className="">
         <h1 className="text-3xl font-bold">Rick and Morty Characters</h1>
 

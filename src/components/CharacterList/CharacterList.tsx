@@ -23,7 +23,7 @@ const CharacterList = ({
     <div className="">
       <h3>{title}</h3>
 
-      <ul>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-4">
         {characters.map((character: CharacterType) => (
           <div
             className=""

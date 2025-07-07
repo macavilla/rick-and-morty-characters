@@ -29,7 +29,7 @@ const Dashboard = ({ characters }: DashboardProps) => {
     <div>
       <h2>Rick and Morty Characters List:</h2>
 
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between w-full gap-1">
         <CharacterList
           title="Character #1"
           selectedCharacter={character1}
