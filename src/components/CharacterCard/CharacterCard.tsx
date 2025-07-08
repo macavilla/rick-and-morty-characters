@@ -4,18 +4,34 @@ import { CharacterType } from "@/types/character";
 
 interface CharacerCardProps {
   character: CharacterType;
+  onSelect: () => void;
   isSelected: boolean;
+  isDisabled?: boolean;
 }
 
-const CharacterCard = ({ character, isSelected }: CharacerCardProps) => {
-  console.log(
-    "CharacterCard character :>> ",
-    character,
-    " isSelected :>> ",
-    isSelected
-  );
+const CharacterCard = ({
+  character,
+  onSelect,
+  isSelected,
+  isDisabled,
+}: CharacerCardProps) => {
+  const handleClick = () => {
+    if (!isDisabled) onSelect();
+  };
+
   return (
-    <div className="lg:flex hover:text-gray-500 gap-1 cursor-pointer">
+    <div
+      onClick={handleClick}
+      className={`
+      p-2 border rounded-md
+      ${
+        isDisabled
+          ? "cursor-not-allowed opacity-50"
+          : "cursor-pointer hover:text-gray-500"
+      }
+      ${isSelected ? "text-blue-500 font-bold" : ""}
+    `}
+    >
       <div className="w-full lg:w-1/2">
         <Image
           src={character.image}

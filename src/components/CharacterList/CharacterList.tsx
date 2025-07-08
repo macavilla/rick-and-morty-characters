@@ -3,38 +3,32 @@ import { CharacterType } from "@/types/character";
 import CharacterCard from "../CharacterCard/CharacterCard";
 interface CharacterListProps {
   characters: CharacterType[];
-  title: string;
-  onSelect: (characterId: CharacterType["id"]) => void;
+  listId: 1 | 2;
   selectedCharacter: CharacterType["id"] | null;
+  otherSelectedCharacter: CharacterType["id"] | null;
+  onSelect: (c: CharacterType["id"]) => void;
 }
 
 const CharacterList = ({
+  listId,
   characters,
   selectedCharacter,
+  otherSelectedCharacter,
   onSelect,
-  title,
 }: CharacterListProps) => {
-  console.log("characters :>> ", characters);
-
-  const handleSelectCharacter = (characterId: CharacterType["id"]) => {
-    onSelect(characterId);
-  };
   return (
     <div className="">
-      <h3>{title}</h3>
+      <h3 className="text-2xl">Character #{listId}</h3>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-4">
         {characters.map((character: CharacterType) => (
-          <div
-            className=""
+          <CharacterCard
             key={character.id}
-            onClick={() => handleSelectCharacter(character.id)}
-          >
-            <CharacterCard
-              character={character}
-              isSelected={character.id === selectedCharacter}
-            />
-          </div>
+            character={character}
+            isSelected={character.id === selectedCharacter}
+            isDisabled={character.id === otherSelectedCharacter}
+            onSelect={() => onSelect(character.id)}
+          />
         ))}
       </ul>
     </div>

@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+
 import { CharacterType } from "@/types/character";
+
 import CharacterList from "../CharacterList/CharacterList";
-// import Episodes from "../Episodes/Episodes";
+import Episodes from "../Episodes/Episodes";
 
 interface DashboardProps {
   characters: CharacterType[];
@@ -16,36 +18,40 @@ const Dashboard = ({ characters }: DashboardProps) => {
     null
   );
 
-  const handleSelectCharacter1 = (characterId: CharacterType["id"]) => {
-    setCharacter1(characterId);
+  const handleResetSelection = () => {
+    setCharacter1(null);
+    setCharacter2(null);
   };
 
-  const handleSelectCharacter2 = (characterId: CharacterType["id"]) => {
-    setCharacter2(characterId);
-  };
-
-  console.log("characters :>> ", characters);
   return (
     <div>
       <h2>Rick and Morty Characters List:</h2>
 
+      <button
+        className="cursor-pointer bg-red-300"
+        onClick={handleResetSelection}
+      >
+        Reset selection
+      </button>
       <div className="flex justify-between w-full gap-1">
         <CharacterList
-          title="Character #1"
-          selectedCharacter={character1}
-          onSelect={handleSelectCharacter1}
+          listId={1}
           characters={characters}
+          selectedCharacter={character1}
+          otherSelectedCharacter={character2}
+          onSelect={setCharacter1}
         />
         <CharacterList
-          title="Character #2"
-          selectedCharacter={character2}
-          onSelect={handleSelectCharacter2}
+          listId={2}
           characters={characters}
+          selectedCharacter={character2}
+          otherSelectedCharacter={character1}
+          onSelect={setCharacter2}
         />
       </div>
-      {/* <h2>Selected Characters Epi:</h2>
+      <h2>Selected Characters Epi:</h2>
 
-      <Episodes /> */}
+      <Episodes />
     </div>
   );
 };
