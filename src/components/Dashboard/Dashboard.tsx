@@ -11,12 +11,8 @@ interface DashboardProps {
   characters: CharacterType[];
 }
 const Dashboard = ({ characters }: DashboardProps) => {
-  const [character1, setCharacter1] = useState<CharacterType["id"] | null>(
-    null
-  );
-  const [character2, setCharacter2] = useState<CharacterType["id"] | null>(
-    null
-  );
+  const [character1, setCharacter1] = useState<CharacterType | null>(null);
+  const [character2, setCharacter2] = useState<CharacterType | null>(null);
 
   const handleResetSelection = () => {
     setCharacter1(null);
@@ -51,7 +47,10 @@ const Dashboard = ({ characters }: DashboardProps) => {
       </div>
       <h2>Selected Characters Epi:</h2>
 
-      <Episodes />
+      <Episodes
+        character1Episode={character1?.episode || null}
+        character2Episode={character2?.episode || null}
+      />
     </div>
   );
 };
