@@ -1,23 +1,14 @@
-import { CharacterType } from "@/types/character";
-
-interface EpisodesProps {
-  character1?: CharacterType;
-  character2?: CharacterType;
-}
-
-const Episodes = ({ character1, character2 }: EpisodesProps) => {
-  //   console.log("character1 :>> ", character1);
-  //   console.log("character2 :>> ", character2);
+const Episodes = () => {
   return (
     <div className="">
       <div className="">
-        <h2>Character 1 Episodes</h2>
+        <h3>Character 1 Episodes</h3>
       </div>
       <div className="">
-        <h2>Shared episodes</h2>
+        <h3>Shared episodes</h3>
       </div>
       <div className="">
-        <h2>Character 2 Episodes</h2>
+        <h3>Character 2 Episodes</h3>
       </div>
     </div>
   );
