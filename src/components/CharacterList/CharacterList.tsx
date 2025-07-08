@@ -4,9 +4,9 @@ import CharacterCard from "../CharacterCard/CharacterCard";
 interface CharacterListProps {
   characters: CharacterType[];
   listId: 1 | 2;
-  selectedCharacter: CharacterType["id"] | null;
-  otherSelectedCharacter: CharacterType["id"] | null;
-  onSelect: (c: CharacterType["id"]) => void;
+  selectedCharacter: CharacterType | null;
+  otherSelectedCharacter: CharacterType | null;
+  onSelect: (c: CharacterType) => void;
 }
 
 const CharacterList = ({
@@ -25,9 +25,9 @@ const CharacterList = ({
           <CharacterCard
             key={character.id}
             character={character}
-            isSelected={character.id === selectedCharacter}
-            isDisabled={character.id === otherSelectedCharacter}
-            onSelect={() => onSelect(character.id)}
+            isSelected={character === selectedCharacter}
+            isDisabled={character === otherSelectedCharacter}
+            onSelect={() => onSelect(character)}
           />
         ))}
       </ul>
