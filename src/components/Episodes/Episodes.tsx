@@ -50,7 +50,7 @@ const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
       : null;
 
   return (
-    <div className="md:flex justify-between">
+    <div className="md:flex md:justify-between md:gap-4">
       <div className="w-full md:w-1/3">
         <EpisodesList
           title="Character 1 episodes"
