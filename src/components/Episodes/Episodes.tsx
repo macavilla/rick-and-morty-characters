@@ -1,69 +1,72 @@
-import { CharacterType } from "@/types/character";
-import EpisodesList from "./EpisodesList/EpisodesList";
 import { useEffect, useState } from "react";
-import { get } from "https";
+
+import { CharacterType } from "@/types/character";
 import { EpisodeType } from "@/types/episode";
-import fetchEpisodes from "@/lib/fetchEpisodes";
+
+import fetchEpisodes from "@/utils/fetchEpisodes";
+import getEpisodesIds from "@/utils/getEpisodesIds";
+
+import EpisodesList from "./EpisodesList/EpisodesList";
 
 interface EpisodesProps {
   character1Episode: CharacterType["episode"] | null;
   character2Episode: CharacterType["episode"] | null;
 }
 
-const getEpisodesIds = (episodes: CharacterType["episode"]) => {
-  return episodes.map((ep) => Number(ep.split("/").pop()));
-};
 const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
-  const [episodes1, setEpisodes1] = useState<EpisodeType[] | null>(null);
-  const [episodes2, setEpisodes2] = useState<EpisodeType[] | null>(null);
-  const [sharedEpisodes, setSharedEpisodes] = useState<EpisodeType[] | null>(
-    null
-  );
+  const [episodes, setEpisodes] = useState<{
+    character1: EpisodeType[] | null;
+    character2: EpisodeType[] | null;
+  }>({ character1: null, character2: null });
 
   useEffect(() => {
-    if (!character1Episode && !character2Episode) return;
+    const fetchAllEpisodes = async () => {
+      if (!character1Episode && !character2Episode) return;
 
-    if (character1Episode) {
-      fetchEpisodes(getEpisodesIds(character1Episode)).then((episodes) => {
-        setEpisodes1(episodes);
-      });
-    }
+      const char1Ids = character1Episode
+        ? getEpisodesIds(character1Episode)
+        : [];
+      const char2Ids = character2Episode
+        ? getEpisodesIds(character2Episode)
+        : [];
 
-    if (character2Episode) {
-      fetchEpisodes(getEpisodesIds(character2Episode)).then((episodes) => {
-        setEpisodes2(episodes);
-      });
-    }
+      const allIds = Array.from(new Set([...char1Ids, ...char2Ids]));
+      const allEpisodes = await fetchEpisodes(allIds);
 
-    if (character1Episode && character2Episode) {
-      const char1EpisodeIds =
-        character1Episode && getEpisodesIds(character1Episode);
-      const char2EpisodeIds =
-        character2Episode && getEpisodesIds(character2Episode);
+      const character1 = allEpisodes.filter((ep) => char1Ids.includes(ep.id));
+      const character2 = allEpisodes.filter((ep) => char2Ids.includes(ep.id));
 
-      const sharedEpisodesIds = char1EpisodeIds?.filter((episodeId) =>
-        char2EpisodeIds?.includes(episodeId)
-      );
+      setEpisodes({ character1, character2 });
+    };
 
-      fetchEpisodes(sharedEpisodesIds).then((episodes) => {
-        setSharedEpisodes(episodes);
-      });
-    }
+    fetchAllEpisodes();
   }, [character1Episode, character2Episode]);
+
+  const sharedEpisodes =
+    episodes.character1 && episodes.character2
+      ? episodes.character1.filter((ep1) =>
+          episodes.character2?.some((ep2) => ep2.id === ep1.id)
+        )
+      : null;
 
   return (
     <div className="md:flex justify-between">
       <div className="w-full md:w-1/3">
-        <EpisodesList title="Character 1 episodes" episodes={episodes1} />
+        <EpisodesList
+          title="Character 1 episodes"
+          episodes={episodes.character1}
+        />
       </div>
       <div className="w-full md:w-1/3">
         <EpisodesList title="Shared episodes" episodes={sharedEpisodes} />
       </div>
       <div className="w-full md:w-1/3">
-        <EpisodesList title="Character 2 episodes" episodes={episodes2} />
+        <EpisodesList
+          title="Character 2 episodes"
+          episodes={episodes.character2}
+        />
       </div>
     </div>
   );
 };
-
 export default Episodes;
