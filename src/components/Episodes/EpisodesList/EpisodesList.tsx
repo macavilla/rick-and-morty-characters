@@ -8,12 +8,14 @@ interface EpisodesListProps {
 const EpisodesList = ({ title, episodes }: EpisodesListProps) => {
   return (
     <div>
-      <h4>{title} </h4>
+      <h4 className="text-2xl">{title} </h4>
 
       {episodes && (
         <ul>
           {episodes.map((episode) => (
-            <li key={episode.id}>{episode.name}</li>
+            <li className="my-3 list-disc list-inside" key={episode.id}>
+              {episode.episode} - {episode.name} - {episode.air_date}
+            </li>
           ))}
         </ul>
       )}

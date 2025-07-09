@@ -45,7 +45,6 @@ const Dashboard = ({ characters }: DashboardProps) => {
           onSelect={setCharacter2}
         />
       </div>
-      <h2>Selected Characters Epi:</h2>
 
       <Episodes
         character1Episode={character1?.episode || null}
