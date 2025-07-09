@@ -1,8 +1,7 @@
 import { CharacterType } from "@/types/character";
 
 import CharacterCard from "../CharacterCard/CharacterCard";
-import { on } from "events";
-interface CharacterListProps {
+export interface CharacterListProps {
   characters: CharacterType[];
   listId: 1 | 2;
   selectedCharacter: CharacterType | null;

@@ -7,7 +7,7 @@ import { CharacterType } from "@/types/character";
 import CharacterList from "../CharacterList/CharacterList";
 import Episodes from "../Episodes/Episodes";
 
-interface DashboardProps {
+export interface DashboardProps {
   characters: CharacterType[];
 }
 const Dashboard = ({ characters }: DashboardProps) => {

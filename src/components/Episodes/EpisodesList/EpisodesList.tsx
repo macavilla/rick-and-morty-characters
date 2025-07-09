@@ -1,6 +1,6 @@
 import { EpisodeType } from "@/types/episode";
 
-interface EpisodesListProps {
+export interface EpisodesListProps {
   title: string;
   episodes: EpisodeType[] | null;
 }

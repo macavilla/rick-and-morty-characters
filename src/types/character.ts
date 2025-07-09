@@ -4,7 +4,7 @@ export enum CharacterStatus {
   unknown = "unknown",
 }
 
-enum CharacterGender {
+export enum CharacterGender {
   female = "Female",
   male = "Male",
   genderless = "Genderless",
