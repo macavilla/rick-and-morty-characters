@@ -8,7 +8,7 @@ import getEpisodesIds from "@/utils/getEpisodesIds";
 
 import EpisodesList from "./EpisodesList/EpisodesList";
 
-interface EpisodesProps {
+export interface EpisodesProps {
   character1Episode: CharacterType["episode"] | null;
   character2Episode: CharacterType["episode"] | null;
 }

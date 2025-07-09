@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { CharacterType, CharacterStatus } from "@/types/character";
 
-interface CharacerCardProps {
+export interface CharacerCardProps {
   character: CharacterType;
   onSelect: () => void;
   isSelected: boolean;

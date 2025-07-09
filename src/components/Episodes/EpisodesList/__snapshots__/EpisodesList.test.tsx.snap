@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`EpisodesList renders CharacterCard and matches snapshot 1`] = `
+<div>
+  <div>
+    <h4
+      class="text-2xl"
+    >
+      Test Episodes List
+       
+    </h4>
+    <ul>
+      <li
+        class="my-3 list-disc list-inside"
+      >
+        S01E01
+         - 
+        Pilot
+         - 
+        December 2, 2013
+      </li>
+      <li
+        class="my-3 list-disc list-inside"
+      >
+        S01E02
+         - 
+        Lawnmower Dog
+         - 
+        December 9, 2013
+      </li>
+      <li
+        class="my-3 list-disc list-inside"
+      >
+        S01E03
+         - 
+        Anatomy Park
+         - 
+        December 16, 2013
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,376 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CharacterCard renders CharacterCard and matches snapshot 1`] = `
+<div>
+  <div>
+    <h2>
+      Rick and Morty Characters List:
+    </h2>
+    <button
+      class="cursor-pointer bg-red-300"
+    >
+      Reset selection
+    </button>
+    <div
+      class="flex justify-between w-full gap-1"
+    >
+      <div
+        class=""
+      >
+        <h3
+          class="text-2xl"
+        >
+          Character #
+          1
+        </h3>
+        <ul
+          class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-4"
+        >
+          <div
+            class="
+      p-2 border rounded-md lg:flex lg:gap-1
+      cursor-pointer hover:text-gray-500
+      false
+    "
+          >
+            <div
+              class="w-full lg:w-1/2"
+            >
+              <img
+                alt="Rick Sanchez"
+                class="w-full h-auto"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+            <div
+              class="lg:w-1/2"
+            >
+              <h4
+                class="text-2xl"
+              >
+                Rick Sanchez
+              </h4>
+              <div
+                class="flex items-center gap-1"
+              >
+                <div
+                  class="rounded-full size-3 mb-0.5 bg-green-500"
+                />
+                <p
+                  class="capitalize"
+                >
+                  Alive
+                </p>
+              </div>
+              <p>
+                Human
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+      p-2 border rounded-md lg:flex lg:gap-1
+      cursor-pointer hover:text-gray-500
+      false
+    "
+          >
+            <div
+              class="w-full lg:w-1/2"
+            >
+              <img
+                alt="Morty Smith"
+                class="w-full h-auto"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F2.jpeg&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F2.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F2.jpeg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+            <div
+              class="lg:w-1/2"
+            >
+              <h4
+                class="text-2xl"
+              >
+                Morty Smith
+              </h4>
+              <div
+                class="flex items-center gap-1"
+              >
+                <div
+                  class="rounded-full size-3 mb-0.5 bg-green-500"
+                />
+                <p
+                  class="capitalize"
+                >
+                  Alive
+                </p>
+              </div>
+              <p>
+                Human
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+      p-2 border rounded-md lg:flex lg:gap-1
+      cursor-pointer hover:text-gray-500
+      false
+    "
+          >
+            <div
+              class="w-full lg:w-1/2"
+            >
+              <img
+                alt="Summer Smith"
+                class="w-full h-auto"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F3.jpeg&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F3.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F3.jpeg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+            <div
+              class="lg:w-1/2"
+            >
+              <h4
+                class="text-2xl"
+              >
+                Summer Smith
+              </h4>
+              <div
+                class="flex items-center gap-1"
+              >
+                <div
+                  class="rounded-full size-3 mb-0.5 bg-green-500"
+                />
+                <p
+                  class="capitalize"
+                >
+                  Alive
+                </p>
+              </div>
+              <p>
+                Human
+              </p>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <div
+        class=""
+      >
+        <h3
+          class="text-2xl"
+        >
+          Character #
+          2
+        </h3>
+        <ul
+          class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-4"
+        >
+          <div
+            class="
+      p-2 border rounded-md lg:flex lg:gap-1
+      cursor-pointer hover:text-gray-500
+      false
+    "
+          >
+            <div
+              class="w-full lg:w-1/2"
+            >
+              <img
+                alt="Rick Sanchez"
+                class="w-full h-auto"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+            <div
+              class="lg:w-1/2"
+            >
+              <h4
+                class="text-2xl"
+              >
+                Rick Sanchez
+              </h4>
+              <div
+                class="flex items-center gap-1"
+              >
+                <div
+                  class="rounded-full size-3 mb-0.5 bg-green-500"
+                />
+                <p
+                  class="capitalize"
+                >
+                  Alive
+                </p>
+              </div>
+              <p>
+                Human
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+      p-2 border rounded-md lg:flex lg:gap-1
+      cursor-pointer hover:text-gray-500
+      false
+    "
+          >
+            <div
+              class="w-full lg:w-1/2"
+            >
+              <img
+                alt="Morty Smith"
+                class="w-full h-auto"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F2.jpeg&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F2.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F2.jpeg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+            <div
+              class="lg:w-1/2"
+            >
+              <h4
+                class="text-2xl"
+              >
+                Morty Smith
+              </h4>
+              <div
+                class="flex items-center gap-1"
+              >
+                <div
+                  class="rounded-full size-3 mb-0.5 bg-green-500"
+                />
+                <p
+                  class="capitalize"
+                >
+                  Alive
+                </p>
+              </div>
+              <p>
+                Human
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+      p-2 border rounded-md lg:flex lg:gap-1
+      cursor-pointer hover:text-gray-500
+      false
+    "
+          >
+            <div
+              class="w-full lg:w-1/2"
+            >
+              <img
+                alt="Summer Smith"
+                class="w-full h-auto"
+                data-nimg="1"
+                decoding="async"
+                height="300"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F3.jpeg&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F3.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F3.jpeg&w=640&q=75 2x"
+                style="color: transparent;"
+                width="300"
+              />
+            </div>
+            <div
+              class="lg:w-1/2"
+            >
+              <h4
+                class="text-2xl"
+              >
+                Summer Smith
+              </h4>
+              <div
+                class="flex items-center gap-1"
+              >
+                <div
+                  class="rounded-full size-3 mb-0.5 bg-green-500"
+                />
+                <p
+                  class="capitalize"
+                >
+                  Alive
+                </p>
+              </div>
+              <p>
+                Human
+              </p>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="md:flex md:justify-between md:gap-4"
+    >
+      <div
+        class="w-full md:w-1/3"
+      >
+        <div>
+          <h4
+            class="text-2xl"
+          >
+            Character 1 episodes
+             
+          </h4>
+        </div>
+      </div>
+      <div
+        class="w-full md:w-1/3"
+      >
+        <div>
+          <h4
+            class="text-2xl"
+          >
+            Shared episodes
+             
+          </h4>
+        </div>
+      </div>
+      <div
+        class="w-full md:w-1/3"
+      >
+        <div>
+          <h4
+            class="text-2xl"
+          >
+            Character 2 episodes
+             
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
