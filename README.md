@@ -1,7 +1,5 @@
 # Ssr. Frontend Developer (NextJS)
 
-## https://conexatech.notion.site/Ssr-Frontend-Developer-NextJS-7bb4bd04d278424b90101f28bae5a84b
-
 🎯 Objetivo:
 
 Se utilizará la api de rick and morty “https://rickandmortyapi.com/” analizandola y cumpliendo con los siguientes objetivos:
