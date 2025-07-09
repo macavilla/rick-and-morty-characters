@@ -1,12 +1,13 @@
 import { CharacterType } from "@/types/character";
 
 import CharacterCard from "../CharacterCard/CharacterCard";
+import { on } from "events";
 interface CharacterListProps {
   characters: CharacterType[];
   listId: 1 | 2;
   selectedCharacter: CharacterType | null;
   otherSelectedCharacter: CharacterType | null;
-  onSelect: (c: CharacterType) => void;
+  onSelect: (c: CharacterType | null) => void;
 }
 
 const CharacterList = ({
@@ -27,7 +28,11 @@ const CharacterList = ({
             character={character}
             isSelected={character === selectedCharacter}
             isDisabled={character === otherSelectedCharacter}
-            onSelect={() => onSelect(character)}
+            onSelect={() =>
+              character !== selectedCharacter
+                ? onSelect(character)
+                : onSelect(null)
+            }
           />
         ))}
       </ul>
