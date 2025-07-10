@@ -21,7 +21,9 @@ const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
 
   useEffect(() => {
     const fetchAllEpisodes = async () => {
-      if (!character1Episode && !character2Episode) return;
+      if (!character1Episode && !character2Episode) {
+        setEpisodes({ character1: null, character2: null });
+      }
 
       const char1Ids = character1Episode
         ? getEpisodesIds(character1Episode)
@@ -40,7 +42,12 @@ const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
     };
 
     fetchAllEpisodes();
-  }, [character1Episode, character2Episode]);
+  }, [
+    episodes.character1,
+    episodes.character2,
+    character1Episode,
+    character2Episode,
+  ]);
 
   const sharedEpisodes =
     episodes.character1 && episodes.character2
@@ -50,8 +57,8 @@ const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
       : null;
 
   return (
-    <section className="fixed bottom-0 bg-background left-0 right-0 h-auto max-h-1/2 overflow-y-scroll">
-      <div className="md:flex md:justify-between md:gap-4 p-2 border border-t">
+    <section className="fixed mx-4 rounded-t-4xl bottom-0 bg-zinc-700 left-0 right-0 h-auto max-h-1/3 overflow-y-scroll border-t-4 border-zinc-900 ">
+      <div className="md:flex md:justify-between md:gap-4 p-2">
         <div className="w-full md:w-1/3">
           <EpisodesList
             title="Character 1 episodes"
