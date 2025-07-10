@@ -20,7 +20,7 @@ const CharacterList = ({
     <div className="">
       <h3 className="text-2xl">Character #{listId}</h3>
 
-      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-4">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 border-3 rounded-4xl p-2 my-2">
         {characters?.map((character: CharacterType) => (
           <CharacterCard
             key={character.id}
