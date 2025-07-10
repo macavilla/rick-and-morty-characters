@@ -50,23 +50,25 @@ const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
       : null;
 
   return (
-    <div className="md:flex md:justify-between md:gap-4">
-      <div className="w-full md:w-1/3">
-        <EpisodesList
-          title="Character 1 episodes"
-          episodes={episodes.character1}
-        />
+    <section className="fixed bottom-0 bg-background left-0 right-0 h-auto max-h-1/2 overflow-y-scroll">
+      <div className="md:flex md:justify-between md:gap-4 p-2 border border-t">
+        <div className="w-full md:w-1/3">
+          <EpisodesList
+            title="Character 1 episodes"
+            episodes={episodes.character1}
+          />
+        </div>
+        <div className="w-full md:w-1/3">
+          <EpisodesList title="Shared episodes" episodes={sharedEpisodes} />
+        </div>
+        <div className="w-full md:w-1/3">
+          <EpisodesList
+            title="Character 2 episodes"
+            episodes={episodes.character2}
+          />
+        </div>
       </div>
-      <div className="w-full md:w-1/3">
-        <EpisodesList title="Shared episodes" episodes={sharedEpisodes} />
-      </div>
-      <div className="w-full md:w-1/3">
-        <EpisodesList
-          title="Character 2 episodes"
-          episodes={episodes.character2}
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 export default Episodes;
