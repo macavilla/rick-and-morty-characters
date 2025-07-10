@@ -23,37 +23,44 @@ const CharacterCard = ({
     <div
       onClick={handleClick}
       className={`
-      p-2 border rounded-md lg:flex lg:gap-1
+      p-2 border-2 rounded-3xl lg:flex lg:gap-3 
       ${
         isDisabled
           ? "cursor-not-allowed opacity-50"
           : "cursor-pointer hover:text-gray-500"
       }
-      ${isSelected && "text-blue-500 font-bold"}
+      ${
+        isSelected &&
+        " ring-indigo-500 border-2 border-indigo-950 text-indigo-700  font-bold"
+      }
     `}
     >
       <div className="w-full lg:w-1/2">
-        <Image
-          src={character.image}
-          alt={character.name}
-          width={300}
-          height={300}
-          className="w-full h-auto"
-        />
-      </div>
-      <div className="lg:w-1/2">
-        <h4 className="text-2xl">{character.name}</h4>
-        <div className="flex items-center gap-1">
-          <div
-            className={`rounded-full size-3 mb-0.5 ${
-              (character.status === CharacterStatus.alive && "bg-green-500") ||
-              (character.status === CharacterStatus.dead && "bg-red-500") ||
-              "bg-gray-500"
-            }`}
-          ></div>
-          <p className="capitalize">{character.status}</p>
+        <div className="relative">
+          <Image
+            src={character.image}
+            alt={character.name}
+            width={300}
+            height={300}
+            className="w-full h-auto  rounded-2xl"
+          />
+          <div className="flex items-center gap-2 absolute top-1 left-1 border-1 bg-foreground border-background text-background rounded-full py-0.5 px-1.5">
+            <div
+              aria-hidden={true}
+              className={`rounded-full size-3  ${
+                (character.status === CharacterStatus.alive &&
+                  "bg-green-500") ||
+                (character.status === CharacterStatus.dead && "bg-red-500") ||
+                "bg-gray-500"
+              }`}
+            ></div>
+            <p className="capitalize text-xs">{character.status}</p>
+          </div>
         </div>
-        <p>{character.species}</p>
+      </div>
+      <div className="lg:w-1/2 py-2  mt-2 lg:m-0 lg:p-0  lg:pl-3">
+        <h4 className="text-xl lg:text-2xl mb-2">{character.name}</h4>
+        <p className="italic text-lg">{character.species}</p>
       </div>
     </div>
   );

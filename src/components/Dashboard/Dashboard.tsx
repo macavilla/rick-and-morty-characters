@@ -21,15 +21,14 @@ const Dashboard = ({ characters }: DashboardProps) => {
 
   return (
     <div>
-      <h2>Rick and Morty Characters List:</h2>
-
       <button
-        className="cursor-pointer bg-red-300"
+        disabled={!character1 || !character2}
+        className="cursor-pointer bg-red-300 px-2 py-1"
         onClick={handleResetSelection}
       >
         Reset selection
       </button>
-      <div className="flex justify-between w-full gap-1">
+      <div className="flex justify-between w-full gap-1 pb-12">
         <CharacterList
           listId={1}
           characters={characters}
