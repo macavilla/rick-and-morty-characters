@@ -28,7 +28,7 @@ const Dashboard = ({ characters }: DashboardProps) => {
       >
         Reset selection
       </button>
-      <div className="flex justify-between w-full gap-1 pb-12">
+      <div className="flex justify-between w-full gap-1 mb-52">
         <CharacterList
           listId={1}
           characters={characters}
