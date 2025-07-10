@@ -13,7 +13,7 @@ describe("Episodes", () => {
   beforeAll(() => {
     (fetchEpisodes as jest.Mock).mockResolvedValue(mockFetchEpisodes);
   });
-  it("renders Episodes and matches snapshot", () => {
+  it("renders Episodes and matches snapshot", async () => {
     const { container } = render(<Episodes {...mockEpisodesProps} />);
     expect(container).toMatchSnapshot();
   });
