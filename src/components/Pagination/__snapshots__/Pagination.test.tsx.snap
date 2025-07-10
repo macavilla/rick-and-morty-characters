@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Pagination renders Pagination and matches snapshot 1`] = `
+<div>
+  <nav>
+    <ul
+      class="w-full flex"
+    >
+      <li
+        class="mr-auto"
+      >
+        <a
+          aria-description="Go to previous page"
+          href="?page=3"
+        >
+          &lt;&lt;
+        </a>
+      </li>
+      <li
+        class="ml-auto"
+      >
+        <a
+          aria-description="Go to next page"
+          href="?page=2"
+        >
+          &gt;&gt;
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
