@@ -3,8 +3,8 @@ import { mockDashboardProps } from "./__mockData__/Dashboard.mock";
 
 import Dashboard from "./Dashboard";
 
-describe("CharacterCard", () => {
-  it("renders CharacterCard and matches snapshot", () => {
+describe("Dashboard", () => {
+  it("renders Dashboard and matches snapshot", () => {
     const { container } = render(<Dashboard {...mockDashboardProps} />);
     expect(container).toMatchSnapshot();
   });
