@@ -22,8 +22,8 @@ const Dashboard = ({ characters }: DashboardProps) => {
   return (
     <div>
       <button
-        disabled={!character1 || !character2}
-        className="cursor-pointer bg-red-300 px-2 py-1"
+        disabled={!character1 && !character2}
+        className="cursor-pointer border rounded-full px-4 py-1 disabled:opacity-50"
         onClick={handleResetSelection}
       >
         Reset selection
