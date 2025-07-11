@@ -9,7 +9,7 @@ export interface PaginationProps {
 }
 
 const Pagination = ({ paginationInfo }: PaginationProps) => {
-  const { prev, next, count, pages } = paginationInfo || {};
+  const { prev, next } = paginationInfo || {};
 
   const params =
     prev || next

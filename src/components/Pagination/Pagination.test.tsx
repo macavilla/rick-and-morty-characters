@@ -15,4 +15,30 @@ describe("Pagination", () => {
     screen.findByRole("link", { name: "<<" });
     screen.findByRole("link", { name: ">>" });
   });
+
+  it("renders only prev link", () => {
+    render(
+      <Pagination
+        paginationInfo={{
+          ...mockPaginationProps.paginationInfo,
+          next: null,
+        }}
+      />
+    );
+    expect(screen.getByText("<<")).toBeInTheDocument();
+    expect(screen.queryByText(">>")).not.toBeInTheDocument();
+  });
+
+  it("renders only next link", () => {
+    render(
+      <Pagination
+        paginationInfo={{
+          ...mockPaginationProps.paginationInfo,
+          prev: null,
+        }}
+      />
+    );
+    expect(screen.getByText(">>")).toBeInTheDocument();
+    expect(screen.queryByText("<<")).not.toBeInTheDocument();
+  });
 });
