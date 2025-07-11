@@ -57,7 +57,7 @@ const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
       : null;
 
   return (
-    <section className="fixed mx-4 rounded-t-4xl bottom-0 bg-zinc-700 left-0 right-0 h-auto max-h-1/3 overflow-y-scroll border-t-4 border-zinc-900 ">
+    <section className="fixed mx-4 rounded-t-4xl bottom-0 bg-zinc-700 left-0 right-0 h-auto max-h-1/4 overflow-y-scroll border-t-4 border-zinc-900 ">
       <div className="md:flex md:justify-between md:gap-4 p-2">
         <div className="w-full md:w-1/3">
           <EpisodesList
