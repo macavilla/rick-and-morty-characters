@@ -7,8 +7,8 @@ export interface EpisodesListProps {
 
 const EpisodesList = ({ title, episodes }: EpisodesListProps) => {
   return (
-    <div>
-      <h4 className="text-2xl">{title} </h4>
+    <div className="px-4">
+      <h4 className="text-2xl text-center">{title} </h4>
 
       {episodes && (
         <ul>
