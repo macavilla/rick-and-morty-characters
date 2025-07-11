@@ -1,7 +1,9 @@
-import { screen, render, waitFor } from "@testing-library/react";
+import { screen, render, waitFor, within } from "@testing-library/react";
 import {
+  mockEpisodesCharacter1,
   mockEpisodesProps,
   mockFetchEpisodes,
+  sharedEpisode,
 } from "./__mockData__/Episodes.mock";
 import fetchEpisodes from "../../utils/fetchEpisodes";
 
@@ -18,10 +20,25 @@ describe("Episodes", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should render three EpisodesList with shared episodes data", async () => {
+  it("should render three EpisodesList", async () => {
     render(<Episodes {...mockEpisodesProps} />);
-    expect(await screen.findByText("Character 1 episodes"));
-    expect(await screen.findByText("Shared episodes"));
-    expect(await screen.findByText("Character 2 episodes"));
+    expect(await screen.getByRole("heading", { name: /rick sanchez/i }));
+    expect(await screen.getByRole("heading", { name: /shared episodes/i }));
+    expect(await screen.getByRole("heading", { name: /morty smith/i }));
+
+    const lists = await screen.findAllByRole("list");
+    expect(lists.length).toBe(3);
+  });
+
+  it("should render episodes", async () => {
+    render(<Episodes {...mockEpisodesProps} />);
+
+    const lists = await screen.findAllByRole("list");
+
+    lists.forEach((list) => {
+      expect(
+        within(list).getByText("S01E01 - Pilot - December 2, 2013")
+      ).toBeInTheDocument();
+    });
   });
 });
