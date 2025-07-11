@@ -16,6 +16,8 @@ export const mockEpisodesCharacter2: CharacterType["episode"] = [
 export const mockEpisodesProps: EpisodesProps = {
   character1Episode: mockEpisodesCharacter1,
   character2Episode: mockEpisodesCharacter2,
+  characterName1: "Rick Sanchez",
+  characterName2: "Morty Smith",
 };
 
 export const mockFetchEpisodes = [
