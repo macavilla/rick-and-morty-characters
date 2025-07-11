@@ -11,9 +11,16 @@ import EpisodesList from "./EpisodesList/EpisodesList";
 export interface EpisodesProps {
   character1Episode: CharacterType["episode"] | null;
   character2Episode: CharacterType["episode"] | null;
+  characterName1: CharacterType["name"] | null;
+  characterName2: CharacterType["name"] | null;
 }
 
-const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
+const Episodes = ({
+  character1Episode,
+  character2Episode,
+  characterName1,
+  characterName2,
+}: EpisodesProps) => {
   const [episodes, setEpisodes] = useState<{
     character1: EpisodeType[] | null;
     character2: EpisodeType[] | null;
@@ -61,7 +68,7 @@ const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
       <div className="md:flex md:justify-between md:gap-4 p-2">
         <div className="w-full md:w-1/3">
           <EpisodesList
-            title="Character 1 episodes"
+            title={characterName1 || "Character 1 episodes"}
             episodes={episodes.character1}
           />
         </div>
@@ -70,7 +77,7 @@ const Episodes = ({ character1Episode, character2Episode }: EpisodesProps) => {
         </div>
         <div className="w-full md:w-1/3">
           <EpisodesList
-            title="Character 2 episodes"
+            title={characterName2 || "Character 2 episodes"}
             episodes={episodes.character2}
           />
         </div>

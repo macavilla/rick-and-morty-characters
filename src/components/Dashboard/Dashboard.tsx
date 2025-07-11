@@ -28,7 +28,7 @@ const Dashboard = ({ characters }: DashboardProps) => {
       >
         Reset selection
       </button>
-      <div className="flex justify-between w-full gap-1 mb-52">
+      <section className="flex justify-between w-full gap-1 mb-52">
         <CharacterList
           listId={1}
           characters={characters}
@@ -43,9 +43,11 @@ const Dashboard = ({ characters }: DashboardProps) => {
           otherSelectedCharacter={character1}
           onSelect={setCharacter2}
         />
-      </div>
+      </section>
 
       <Episodes
+        characterName1={character1?.name || ""}
+        characterName2={character2?.name || ""}
         character1Episode={character1?.episode || null}
         character2Episode={character2?.episode || null}
       />
