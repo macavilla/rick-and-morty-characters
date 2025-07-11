@@ -1,4 +1,4 @@
-import { screen, render, waitFor } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 import { mockPaginationProps } from "./__mockData__/Pagination.mock";
 
 import Pagination from "./Pagination";

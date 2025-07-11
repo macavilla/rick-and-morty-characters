@@ -1,9 +1,7 @@
-import { screen, render, waitFor, within } from "@testing-library/react";
+import { screen, render, within } from "@testing-library/react";
 import {
-  mockEpisodesCharacter1,
   mockEpisodesProps,
   mockFetchEpisodes,
-  sharedEpisode,
 } from "./__mockData__/Episodes.mock";
 import fetchEpisodes from "../../utils/fetchEpisodes";
 

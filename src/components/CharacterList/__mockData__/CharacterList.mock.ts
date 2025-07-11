@@ -4,7 +4,6 @@ import {
   CharacterGender,
 } from "@/types/character";
 
-import { mockCharacter } from "@/components/CharacterCard/__mockData__/CharacterCard.mock";
 import { CharacterListProps } from "@/components/CharacterList/CharacterList";
 export const mockCharacters: CharacterType[] = [
   {

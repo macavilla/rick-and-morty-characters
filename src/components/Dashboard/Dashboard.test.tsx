@@ -2,7 +2,6 @@ import { screen, render, fireEvent, within } from "@testing-library/react";
 import { mockDashboardProps } from "./__mockData__/Dashboard.mock";
 import { mockCharacters } from "@/components/CharacterList/__mockData__/CharacterList.mock";
 
-import fetchEpisodes from "../../utils/fetchEpisodes";
 import Dashboard from "./Dashboard";
 
 jest.mock("../../utils/fetchEpisodes", () => ({
