@@ -2,12 +2,14 @@
 
 exports[`Pagination renders Pagination and matches snapshot 1`] = `
 <div>
-  <nav>
+  <nav
+    class="fixed bottom-1/2 w-full left-0 z-10"
+  >
     <ul
-      class="w-full flex"
+      class="w-full flex px-2"
     >
       <li
-        class="mr-auto"
+        class="mr-auto text-xl transition duration-300 ease-in-out hover:bg-indigo-800 size-10 rounded-full bg-indigo-500 p-2 flex justify-center items-center"
       >
         <a
           aria-description="Go to previous page"
@@ -17,7 +19,7 @@ exports[`Pagination renders Pagination and matches snapshot 1`] = `
         </a>
       </li>
       <li
-        class="ml-auto"
+        class="ml-auto text-xl transition duration-300 ease-in-out hover:bg-indigo-800 size-10 rounded-full bg-indigo-500 p-2 flex justify-center items-center"
       >
         <a
           aria-description="Go to next page"

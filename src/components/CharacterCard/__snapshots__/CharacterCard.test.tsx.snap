@@ -4,7 +4,7 @@ exports[`CharacterCard renders CharacterCard and matches snapshot 1`] = `
 <div>
   <div
     class="
-      p-2 border rounded-md lg:flex lg:gap-1
+      p-2 border-2 rounded-3xl lg:flex lg:gap-3 
       cursor-pointer hover:text-gray-500
       false
     "
@@ -12,40 +12,47 @@ exports[`CharacterCard renders CharacterCard and matches snapshot 1`] = `
     <div
       class="w-full lg:w-1/2"
     >
-      <img
-        alt="Rick Sanchez"
-        class="w-full h-auto"
-        data-nimg="1"
-        decoding="async"
-        height="300"
-        loading="lazy"
-        src="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=640&q=75"
-        srcset="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=640&q=75 2x"
-        style="color: transparent;"
-        width="300"
-      />
+      <div
+        class="relative"
+      >
+        <img
+          alt="Rick Sanchez"
+          class="w-full h-auto  rounded-2xl"
+          data-nimg="1"
+          decoding="async"
+          height="300"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=640&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F1.jpeg&w=640&q=75 2x"
+          style="color: transparent;"
+          width="300"
+        />
+        <div
+          class="flex items-center gap-2 absolute top-1 left-1 border-1 bg-foreground border-background text-background rounded-full py-0.5 px-1.5"
+        >
+          <div
+            aria-hidden="true"
+            class="rounded-full size-3  bg-green-500"
+          />
+          <p
+            class="capitalize text-xs"
+          >
+            Alive
+          </p>
+        </div>
+      </div>
     </div>
     <div
-      class="lg:w-1/2"
+      class="lg:w-1/2 py-2  mt-2 lg:m-0 lg:p-0  lg:pl-3"
     >
       <h4
-        class="text-2xl"
+        class="text-xl lg:text-2xl mb-2"
       >
         Rick Sanchez
       </h4>
-      <div
-        class="flex items-center gap-1"
+      <p
+        class="italic text-lg"
       >
-        <div
-          class="rounded-full size-3 mb-0.5 bg-green-500"
-        />
-        <p
-          class="capitalize"
-        >
-          Alive
-        </p>
-      </div>
-      <p>
         Human
       </p>
     </div>
