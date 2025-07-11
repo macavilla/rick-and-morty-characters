@@ -29,10 +29,7 @@ const CharacterCard = ({
           ? "cursor-not-allowed opacity-50"
           : "cursor-pointer hover:text-gray-500"
       }
-      ${
-        isSelected &&
-        " ring-indigo-500 border-2 border-indigo-950 text-indigo-700  font-bold"
-      }
+      ${isSelected && "border-2 border-indigo-950 text-indigo-700 font-bold"}
     `}
     >
       <div className="w-full lg:w-1/2">

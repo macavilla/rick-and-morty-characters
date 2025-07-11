@@ -26,7 +26,8 @@ export const mockCharacter: CharacterType = {
   created: "2017-11-04T18:48:46.250Z",
 };
 
-const mockOnSelect = jest.fn();
+export const mockOnSelect = jest.fn();
+
 export const mockCharacterCardProps: CharacerCardProps = {
   character: mockCharacter,
   onSelect: mockOnSelect,
