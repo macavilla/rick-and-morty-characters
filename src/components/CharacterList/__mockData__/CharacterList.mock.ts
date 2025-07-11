@@ -213,10 +213,11 @@ export const mockCharacters: CharacterType[] = [
   },
 ];
 
+export const mockOnSelect = jest.fn();
 export const mockCharacterListProps: CharacterListProps = {
   listId: 1,
-  characters: [mockCharacter],
-  selectedCharacter: mockCharacter,
-  otherSelectedCharacter: mockCharacter,
-  onSelect: jest.fn(),
+  characters: mockCharacters,
+  selectedCharacter: null,
+  otherSelectedCharacter: null,
+  onSelect: mockOnSelect,
 };
