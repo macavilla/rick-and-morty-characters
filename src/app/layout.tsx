@@ -28,7 +28,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="p-4">
-          <h1 className="text-3xl font-bold">Rick and Morty Characters</h1>
+          <h1 className="text-4xl text-center font-bold">
+            Rick and Morty Characters
+          </h1>
         </header>
         <main className="min-h-screen p-4 sm:p-6 font-[family-name:var(--font-geist-sans)]">
           {children}
